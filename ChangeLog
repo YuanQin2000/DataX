@@ -186,3 +186,10 @@ Author:     Yuan Qin <yuanqin2000@outlook.com>
 Changes:
             Implement a common protocol framework.
             Refactor HTTP connection based on the common protocol framework.
+
+Version:    master
+Date:       2017/01/31
+Author:     Yuan Qin <yuanqin2000@outlook.com>
+Changes:
+            Add License (GPLv3)
+            Put it to Github
