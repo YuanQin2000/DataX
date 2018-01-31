@@ -15,6 +15,7 @@
 *.so
 *.dylib
 *.dll
+*.so.*
 
 # Fortran module files
 *.mod
@@ -30,3 +31,11 @@
 *.exe
 *.out
 *.app
+
+# MISC
+backup/
+3rdparty-orig/
+3rdparty-cust/
+tar-archive.sh
+Backlog.ods
+DataX.kdev4
