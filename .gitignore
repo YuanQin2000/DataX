@@ -33,6 +33,7 @@
 *.app
 
 # MISC
+build/
 backup/
 3rdparty-orig/
 3rdparty-cust/
