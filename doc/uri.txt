@@ -1,0 +1,73 @@
+      URI         = scheme ":" hier-part [ "?" query ] [ "#" fragment ]
+
+      hier-part   = "//" authority path-abempty
+                  / path-absolute
+                  / path-rootless
+                  / path-empty
+
+   When authority is present, the path must
+   either be empty or begin with a slash ("/") character.  When
+   authority is not present, the path cannot begin with two slash
+   characters ("//")
+				  
+   The following are two example URIs and their component parts:
+
+         foo://example.com:8042/over/there?name=ferret#nose
+         \_/   \______________/\_________/ \_________/ \__/
+          |           |            |            |        |
+       scheme     authority       path        query   fragment
+          |   _____________________|__
+         / \ /                        \
+         urn:example:animal:ferret:nose
+		 
+
+authority   = [ userinfo "@" ] host [ ":" port ]
+
+   The authority component is preceded by a double slash ("//") and is
+   terminated by the next slash ("/"), question mark ("?"), or number
+   sign ("#") character, or by the end of the URI.
+
+host        = IP-literal / IPv4address / reg-name
+Domain name is a sort of reg-name
+
+      path          = path-abempty    ; begins with "/" or is empty
+                    / path-absolute   ; begins with "/" but not "//"
+                    / path-noscheme   ; begins with a non-colon segment
+                    / path-rootless   ; begins with a segment
+                    / path-empty      ; zero characters
+
+      path-abempty  = *( "/" segment )
+      path-absolute = "/" [ segment-nz *( "/" segment ) ]
+      path-noscheme = segment-nz-nc *( "/" segment )
+      path-rootless = segment-nz *( "/" segment )
+      path-empty    = 0<pchar>
+	  
+      segment       = *pchar
+      segment-nz    = 1*pchar
+      segment-nz-nc = 1*( unreserved / pct-encoded / sub-delims / "@" )
+                    ; non-zero-length segment without any colon ":"
+
+      pchar         = unreserved / pct-encoded / sub-delims / ":" / "@"
+	  
+	  
+     HTTP-message   = start-line
+                      *( header-field CRLF )
+                      CRLF
+                      [ message-body ]
+					  
+     start-line     = request-line / status-line
+	 
+     request-line   = method SP request-target SP HTTP-version CRLF
+
+     status-line = HTTP-version SP status-code SP reason-phrase CRLF
+
+     header-field   = field-name ":" OWS field-value OWS
+
+     field-name     = token
+     field-value    = *( field-content / obs-fold )
+     field-content  = field-vchar [ 1*( SP / HTAB ) field-vchar ]
+     field-vchar    = VCHAR / obs-text
+
+     obs-fold       = CRLF 1*( SP / HTAB )
+                    ; obsolete line folding
+                    ; see Section 3.2.4

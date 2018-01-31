@@ -1,0 +1,16 @@
+<configure>
+    <connection
+        send-buffer-bytes="4096"
+        receive-buffer-bytes="8192"
+        persistent="true">
+        <proxy uri="10.216.16.201:8080" persistent="true">
+            <white-list>192.168.0.0/16</white-list>
+            <white-list>172.16.0.0-172.31.0.0/12</white-list>
+            <white-list>10.0.0.0/8</white-list>
+        </proxy>
+        <persistence max-pending-request="2" idle-seconds="600"/>
+    </connection>
+    <request-preference>
+        <User-Agent>Bytec/0.1</User-Agent>
+    </request-preference>
+</configure>

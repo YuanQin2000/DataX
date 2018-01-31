@@ -1,0 +1,188 @@
+Version:    master (Unreleased)
+Date:       2016/10/13
+Author:     Yuan Qin <yuanqin2000@outlook.com>
+Changes:
+            1) First executable version
+            2) Supported non-zipped GET.
+            3) Supported chunked data.
+
+Version:    master (Unreleased)
+Date:       2016/10/21
+Author:     Yuan Qin <yuanqin2000@outlook.com>
+Changes:
+            1) Improved HttpHeaderField implemenation
+
+Version:    master (Unreleased)
+Date:       2016/10/28
+Author:     Yuan Qin <yuanqin2000@outlook.com>
+Changes:
+            1) Implemented the XML parse functionility
+
+Version:    master (Unreleased)
+Date:       2016/11/1
+Author:     Yuan Qin <yuanqin2000@outlook.com>
+Changes:
+            1) Linked the Header field/preference (configure) and XML
+
+Version:    master (Unreleased)
+Date:       2016/11/7
+Author:     Yuan Qin <yuanqin2000@outlook.com>
+Changes:
+            1) Added the gzip uncompressor functionality
+            2) Supported SSL read/write via openssl lib.
+
+Version:    master (Unreleased)
+Date:       2016/11/11
+Author:     Yuan Qin <yuanqin2000@outlook.com>
+Changes:
+            1) Improved HttpHeaderField implemenation
+
+Version:    master (Unreleased)
+Date:       2017/01/17
+Author:     Yuan Qin <yuanqin2000@outlook.com>
+Changes:
+            1) Decoupled the HTTP parse and semantics hence the HTTP-like protocols can be extended easily
+            2) Enhanced the logger system.
+
+Version:    master (Unreleased)
+Date:       2017/01/23
+Author:     Yuan Qin <yuanqin2000@outlook.com>
+Changes:
+            1) Fixed some bugs and now the HTTP functionality overall status is equal to the status of 2016/11/11 version
+
+Version:    master (Unreleased)
+Date:       2017/02/28
+Author:     Yuan Qin <yuanqin2000@outlook.com>
+Changes:
+            1) Re-organized project structure (for the client application)
+            2) Implemented the user control command framework.
+            3) Implemented a basic command line client application.
+
+Version:    master (Unreleased)
+Date:       2017/03/20
+Author:     Yuan Qin <yuanqin2000@outlook.com>
+Changes:
+            1) Refactored the control command message
+            2) Enhanced the control command framework.
+
+Version:    master (Unreleased)
+Date:       2017/03/24
+Author:     Yuan Qin <yuanqin2000@outlook.com>
+Changes:
+            1) Refactored the configure system
+
+Version:    master (Unreleased)
+Date:       2017/04/25
+Author:     Yuan Qin <yuanqin2000@outlook.com>
+Changes:
+            1) Refactored the HTTP architecture (HTTP Connection/Request)
+            2) Implemented the proxy support
+
+Version:    master (Unreleased)
+Date:       2017/04/29
+Author:     Yuan Qin <yuanqin2000@outlook.com>
+Changes:
+            1) Bugs fixing.
+               Fixed tcp receive hung up defect
+               Fixed SSL error handling for the transport layer close
+               Fixed Http Connection is not resued defect.
+               Fixed Compressor/Decompressor register information defect.
+               Fixed Server can't handle multiple request defect.
+            2) Error Code simplification.
+
+Version:    master (Unreleased)
+Date:       2017/05/11
+Author:     Yuan Qin <yuanqin2000@outlook.com>
+Changes:
+            1) Added Request priority
+            2) Handled the most common status code (redirect, error)
+            3) Enhanced the debug utilities (call stack output, assert)
+            4) Bug Fixing (HttpRequest destruction)
+ 
+Version:    master (Unreleased)
+Date:       2017/07/21
+Author:     Yuan Qin <yuanqin2000@outlook.com>
+Changes:
+            1) Re-organized project structure (Extract the Application,
+               changed more code to be as the infrastructure components)
+
+Version:    master (Unreleased)
+Date:       2017/09/08
+Author:     Yuan Qin <yuanqin2000@outlook.com>
+Changes:
+            1) Introduced CppUTest to project.
+
+Version:    master (Unreleased)
+Date:       2017/09/15
+Author:     Yuan Qin <yuanqin2000@outlook.com>
+Changes:
+            1) Bascially made the cookie system work, a long long ... long period
+
+Version:    master (Unreleased)
+Date:       2017/09/25
+Author:     Yuan Qin <yuanqin2000@outlook.com>
+Changes:
+            1) Made the unit test coverage tools works.
+
+Version:    master (Unreleased)
+Date:       2017/09/30
+Author:     Yuan Qin <yuanqin2000@outlook.com>
+Changes:
+            Complete the cookie:
+            1) Refactored part of cookie system (access method by cursor)
+            2) Implemented the expired cookie deletion.
+            3) Fixed some bugs on cookie system.
+
+Version:    master (Unreleased)
+Date:       2017/10/20
+Author:     Yuan Qin <yuanqin2000@outlook.com>
+Changes:
+            Refactored the thread loop, poller
+
+Version:    master (Unreleased)
+Date:       2017/10/24
+Author:     Yuan Qin <yuanqin2000@outlook.com>
+Changes:
+            Re-organized the project source tree.
+
+Version:    master (Unreleased)
+Date:       2017/11/06
+Author:     Yuan Qin <yuanqin2000@outlook.com>
+Changes:
+            Refactored (intrusive) forward and duplex list.
+
+Version:    master (Unreleased)
+Date:       2017/11/13
+Author:     Yuan Qin <yuanqin2000@outlook.com>
+Changes:
+            Implemented the Stream Data Process (SDP) framework
+
+Version:    master (Unreleased)
+Date:       2017/11/24
+Author:     Yuan Qin <yuanqin2000@outlook.com>
+Changes:
+            Refactored array data structure, remove some duplicated design.
+            Remove the CFactoryObject class
+            Fix a Network unreachable bug.
+
+Version:    master (Unreleased)
+Date:       2017/12/08
+Author:     Yuan Qin <yuanqin2000@outlook.com>
+Changes:
+            Replace byte data by array data frame (to present structured data) for SDP framework
+            Enhance the Forward and duplex list for aggregated data.
+            Handle the critical/crash signal, to dump the key information for debug.
+
+Version:    master (Unreleased)
+Date:       2017/12/20
+Author:     Yuan Qin <yuanqin2000@outlook.com>
+Changes:
+            Ported mbedTLS.
+            Refactored openssl library usage, then program can switch different SSL libraries.
+
+Version:    master (Unreleased)
+Date:       2017/01/17
+Author:     Yuan Qin <yuanqin2000@outlook.com>
+Changes:
+            Implement a common protocol framework.
+            Refactor HTTP connection based on the common protocol framework.

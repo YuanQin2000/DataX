@@ -1,0 +1,11 @@
+<configure>
+    <connection
+        send-buffer-bytes="4096"
+        receive-buffer-bytes="8192"
+        persistent="true">
+        <persistence max-pending-request="10" idle-seconds="600"/>
+    </connection>
+    <request-preference>
+        <User-Agent>Bytec/0.1</User-Agent>
+    </request-preference>
+</configure>

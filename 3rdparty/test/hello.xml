@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.stc.elderphone.calendar" >
+
+    <application
+        android:name="com.stc.elderphone.calendar.CalendarApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        <activity
+            android:name="com.stc.elderphone.calendar.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <hello>happygirl</hello>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.stc.elderphone.calendar.MonthActivity"
+            android:label="@string/title_activity_month_view"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.stc.elderphone.calendar.LunarActivity"
+            android:label="@string/title_activity_lunar"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.stc.elderphone.calendar.DatePickerActivity"
+            android:label="@string/title_activity_date_picker"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Dialog" >
+        </activity>
+
+        <provider
+            android:name="com.stc.elderphone.calendar.LunarProvider"
+            android:authorities="com.elderphone.calendar"
+            android:enabled="true"
+            android:exported="true" >
+        </provider>
+    </application>
+
+</manifest>
