@@ -80,6 +80,9 @@ CFLAGS   += -D__USE_MBED_TLS__
 LDFLAGS  += -lmbedcrypto
 LDFLAGS  += -lmbedtls
 LDFLAGS  += -lmbedx509
+else ifeq($(SSL), ) # Not defined the SSL library, use openssl as the default.
+CFLAGS   += -D__USE_OPEN_SSL__
+LDFLAGS  += -lssl
 endif
 LDFLAGS  += -lreadline
 LDFLAGS  += -ldb

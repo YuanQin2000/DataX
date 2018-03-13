@@ -46,7 +46,7 @@ private:
         friend class CSingleton2<CSSLContext>;
     };
 
-    COpenSSLClient(CTcpClient* pTcp, bool bCheckPeerCert);
+    COpenSSLClient(CIOContext* pIO, bool bCheckPeerCert);
 
     // From CSSLClient
     bool Initialize();
