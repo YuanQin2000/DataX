@@ -72,6 +72,12 @@ LDFLAGS  += -ldl
 LDFLAGS  += -lexpat
 LDFLAGS  += -lz
 LDFLAGS  += -lcrypto
+
+#SSL libraries selection
+ifeq ($(SSL), ) # Not defined the SSL library, use openssl as the default.
+CFLAGS   += -D__USE_OPEN_SSL__
+LDFLAGS  += -lssl
+else
 ifeq ($(SSL), openssl)
 CFLAGS   += -D__USE_OPEN_SSL__
 LDFLAGS  += -lssl
@@ -80,10 +86,9 @@ CFLAGS   += -D__USE_MBED_TLS__
 LDFLAGS  += -lmbedcrypto
 LDFLAGS  += -lmbedtls
 LDFLAGS  += -lmbedx509
-else ifeq($(SSL), ) # Not defined the SSL library, use openssl as the default.
-CFLAGS   += -D__USE_OPEN_SSL__
-LDFLAGS  += -lssl
 endif
+endif
+
 LDFLAGS  += -lreadline
 LDFLAGS  += -ldb
 

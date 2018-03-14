@@ -119,12 +119,16 @@ static void HandleCrashSignal(int signalNo, siginfo_t* pInfo, void* context)
         case BUS_OBJERR:
             sigText = "Object specific hardware error";
             break;
+#ifdef BUS_MCEERR_AR
         case BUS_MCEERR_AR:
             sigText = "Hardware memory error: action required";
             break;
+#endif
+#ifdef BUS_MCEERR_AO
         case BUS_MCEERR_AO:
             sigText = "Hardware memory error: action optional";
             break;
+#endif
         default:
             ASSERT(false, "Unknown signal information code: %d\n", pInfo->si_code);
         }
